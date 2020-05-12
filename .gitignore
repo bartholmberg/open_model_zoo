@@ -290,8 +290,8 @@ report/
 /CMakeFiles
 *.stamp
 *.depend
-*.vcxproj
-*.sln
+#*.vcxproj
+#*.sln
 /CMakeCache.txt
 .vimprj/
 build_IA32/

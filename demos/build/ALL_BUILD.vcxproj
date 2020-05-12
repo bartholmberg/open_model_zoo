@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{905D4B61-745D-3203-B62A-91DFBE963C2A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\repo\open_model_zoo\demos\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/repo/open_model_zoo/demos/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/repo/open_model_zoo/demos -BC:/repo/open_model_zoo/demos/build --check-stamp-file C:/repo/open_model_zoo/demos/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\WindowsPaths.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\InferenceEngineConfig-version.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\InferenceEngineConfig.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\ie_parallel.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphConfig.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphConfigVersion.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphTargets-release.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphTargets.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeCCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeCXXCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeRCCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\repo\open_model_zoo\demos\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/repo/open_model_zoo/demos/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/repo/open_model_zoo/demos -BC:/repo/open_model_zoo/demos/build --check-stamp-file C:/repo/open_model_zoo/demos/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\WindowsPaths.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\InferenceEngineConfig-version.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\InferenceEngineConfig.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\ie_parallel.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphConfig.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphConfigVersion.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphTargets-release.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphTargets.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeCCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeCXXCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeRCCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\repo\open_model_zoo\demos\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/repo/open_model_zoo/demos/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/repo/open_model_zoo/demos -BC:/repo/open_model_zoo/demos/build --check-stamp-file C:/repo/open_model_zoo/demos/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\WindowsPaths.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\InferenceEngineConfig-version.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\InferenceEngineConfig.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\ie_parallel.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphConfig.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphConfigVersion.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphTargets-release.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphTargets.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeCCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeCXXCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeRCCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\repo\open_model_zoo\demos\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/repo/open_model_zoo/demos/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/repo/open_model_zoo/demos -BC:/repo/open_model_zoo/demos/build --check-stamp-file C:/repo/open_model_zoo/demos/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\Platform\WindowsPaths.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\InferenceEngineConfig-version.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\InferenceEngineConfig.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\inference_engine\share\ie_parallel.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphConfig.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphConfigVersion.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphTargets-release.cmake;C:\repo\IntelSWTools\openvino\deployment_tools\ngraph\cmake\ngraphTargets.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeCCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeCXXCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeRCCompiler.cmake;C:\repo\open_model_zoo\demos\build\CMakeFiles\3.16.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\repo\open_model_zoo\demos\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\ZERO_CHECK.vcxproj">
+      <Project>{BDC94528-0939-3517-A8BB-4DF761D886BC}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\multi_channel\common\common.vcxproj">
+      <Project>{64BA06E3-0612-304C-8E49-FE837D61F079}</Project>
+      <Name>common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\crossroad_camera_demo\crossroad_camera_demo.vcxproj">
+      <Project>{666AB27C-26CD-300C-8C9F-EAA541393E13}</Project>
+      <Name>crossroad_camera_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\gaze_estimation_demo\gaze_estimation_demo.vcxproj">
+      <Project>{65A28DB9-E196-321F-8B27-2B6A6B8D5E6E}</Project>
+      <Name>gaze_estimation_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\thirdparty\gflags\gflags_nothreads_static.vcxproj">
+      <Project>{84D58187-82E3-3FDD-8529-94140BC91F47}</Project>
+      <Name>gflags_nothreads_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\human_pose_estimation_demo\human_pose_estimation_demo.vcxproj">
+      <Project>{E4403328-5444-31BC-885F-99F37B6CBA9B}</Project>
+      <Name>human_pose_estimation_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\crossroad_camera_demo\ie_samples.vcxproj">
+      <Project>{FFC6814F-BF14-3090-BB87-2EE35A0036E0}</Project>
+      <Name>ie_samples</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\interactive_face_detection_demo\interactive_face_detection_demo.vcxproj">
+      <Project>{ECCCF785-3043-3BEA-A858-1C93FF8C4EBC}</Project>
+      <Name>interactive_face_detection_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\mask_rcnn_demo\mask_rcnn_demo.vcxproj">
+      <Project>{26F84AC6-C7A6-3E34-9550-4AC76D908A9B}</Project>
+      <Name>mask_rcnn_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\common\monitors\monitors.vcxproj">
+      <Project>{C6001892-9BF1-375A-96B5-E7A304D6B285}</Project>
+      <Name>monitors</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\multi_channel\face_detection_demo\multi_channel_face_detection_demo.vcxproj">
+      <Project>{519A1A08-F4CE-3401-B5A3-8281153D2408}</Project>
+      <Name>multi_channel_face_detection_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\multi_channel\human_pose_estimation_demo\multi_channel_human_pose_estimation_demo.vcxproj">
+      <Project>{0B0DD575-B094-3B86-8A4B-F2B9E42BB465}</Project>
+      <Name>multi_channel_human_pose_estimation_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\multi_channel\object_detection_demo_yolov3\multi_channel_object_detection_demo_yolov3.vcxproj">
+      <Project>{4DA85C98-3818-3238-B923-812736FB276D}</Project>
+      <Name>multi_channel_object_detection_demo_yolov3</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\object_detection_demo_faster_rcnn\object_detection_demo_faster_rcnn.vcxproj">
+      <Project>{F39F768F-2207-310B-9682-FAE74B225261}</Project>
+      <Name>object_detection_demo_faster_rcnn</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\object_detection_demo_ssd_async\object_detection_demo_ssd_async.vcxproj">
+      <Project>{45E2FAEE-926B-36DC-B210-8BCBC06227B2}</Project>
+      <Name>object_detection_demo_ssd_async</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\object_detection_demo_yolov3_async\object_detection_demo_yolov3_async.vcxproj">
+      <Project>{2E78F6F0-176A-39D4-8C5B-A33BF378E723}</Project>
+      <Name>object_detection_demo_yolov3_async</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\pedestrian_tracker_demo\pedestrian_tracker_demo.vcxproj">
+      <Project>{88B8E467-FC5E-3F7E-89CB-5A01AD28553F}</Project>
+      <Name>pedestrian_tracker_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\security_barrier_camera_demo\security_barrier_camera_demo.vcxproj">
+      <Project>{2F9B9277-890C-3D0B-B55E-1BB22768F254}</Project>
+      <Name>security_barrier_camera_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\segmentation_demo\segmentation_demo.vcxproj">
+      <Project>{B09F9DF5-4C9B-3AD5-A2CC-886BED687234}</Project>
+      <Name>segmentation_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\smart_classroom_demo\smart_classroom_demo.vcxproj">
+      <Project>{3B398A37-5D95-3A59-ADD8-F4FA046F1A01}</Project>
+      <Name>smart_classroom_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\super_resolution_demo\super_resolution_demo.vcxproj">
+      <Project>{BBBED75C-7896-3EFD-B4B6-1C6DA114288B}</Project>
+      <Name>super_resolution_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\text_detection_demo\text_detection_demo.vcxproj">
+      <Project>{D6AA79C5-6DDD-3F93-BC08-4228E44A9F8F}</Project>
+      <Name>text_detection_demo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
