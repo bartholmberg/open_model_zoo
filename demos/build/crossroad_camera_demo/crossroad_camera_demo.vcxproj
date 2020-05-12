@@ -329,12 +329,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\repo\open_model_zoo\demos\crossroad_camera_demo\crossroad_camera_demo.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\ZERO_CHECK.vcxproj">
-      <Project>{BDC94528-0939-3517-A8BB-4DF761D886BC}</Project>
-      <Name>ZERO_CHECK</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </ProjectReference>
     <ProjectReference Include="C:\repo\open_model_zoo\demos\build\thirdparty\gflags\gflags_nothreads_static.vcxproj">
       <Project>{84D58187-82E3-3FDD-8529-94140BC91F47}</Project>
       <Name>gflags_nothreads_static</Name>
