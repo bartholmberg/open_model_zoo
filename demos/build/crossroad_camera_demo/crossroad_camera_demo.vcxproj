@@ -345,7 +345,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <None Include="..\..\crossroad_camera_demo\README.md">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
-    <None Include="..\..\crossroad_camera_demo\runDemo.cmd">
+    <None Include="..\..\crossroad_camera_demo\runDemo.bat">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </None>
   </ItemGroup>
