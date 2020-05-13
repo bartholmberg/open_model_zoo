@@ -21,7 +21,7 @@
 bld/
 [Bb]in/
 [Oo]bj/
-
+*.bin
 # PY.TEST
 *.pyc
 tests/integration/report.html
@@ -353,3 +353,5 @@ docs/source/generated/
 /*.mapping
 /*.dat
 /*.svg
+tools/downloader/intel/person-attributes-recognition-crossroad-0230/FP16/person-attributes-recognition-crossroad-0230.xml
+tools/downloader/intel/person-attributes-recognition-crossroad-0230/FP32/person-attributes-recognition-crossroad-0230.xml
