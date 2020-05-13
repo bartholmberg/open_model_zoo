@@ -338,6 +338,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Name>monitors</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\crossroad_camera_demo\README.md">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\..\crossroad_camera_demo\runDemo.cmd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
