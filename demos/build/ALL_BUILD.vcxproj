@@ -160,6 +160,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="C:\repo\open_model_zoo\demos\build\ZERO_CHECK.vcxproj">
+      <Project>{BDC94528-0939-3517-A8BB-4DF761D886BC}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
     <ProjectReference Include="C:\repo\open_model_zoo\demos\build\multi_channel\common\common.vcxproj">
       <Project>{64BA06E3-0612-304C-8E49-FE837D61F079}</Project>
       <Name>common</Name>
