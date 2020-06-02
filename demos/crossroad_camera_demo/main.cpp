@@ -20,6 +20,8 @@
 #include <string>
 #include <vector>
 #include <set>
+#include "opencv2/highgui.hpp"
+
 
 #include <inference_engine.hpp>
 
@@ -29,6 +31,24 @@
 #include "crossroad_camera_demo.hpp"
 
 using namespace InferenceEngine;
+
+   
+    const int alpha_slider_max = 100;
+    int alpha_slider;
+    double alpha;
+    double beta;
+    cv::Mat src1;
+    cv::Mat src2;
+    cv::Mat dst;
+    static void on_trackbar(int, void*)
+    {
+        using namespace cv;
+        using std::cout;
+        alpha = (double)alpha_slider / alpha_slider_max;
+        beta = (1.0 - alpha);
+        addWeighted(src1, alpha, src2, beta, 0.0, dst);
+        imshow("Linear Blend", dst);
+    }
 
 bool ParseAndCheckCommandLine(int argc, char *argv[]) {
     // ---------------------------Parsing and validation of input args--------------------------------------
@@ -498,6 +518,28 @@ int main(int argc, char *argv[]) {
         cv::Mat frame = cv::imread(FLAGS_i, cv::IMREAD_COLOR);
         const bool isVideo = frame.empty();
         cv::VideoCapture cap;
+        cv::samples::addSamplesDataSearchPath("C:\\repo\\opencv\\samples\\data");
+       
+        src1 = cv::imread(cv::samples::findFile("LinuxLogo.jpg"));
+        src2 = cv::imread(cv::samples::findFile("WindowsLogo.jpg"));
+        if (src1.empty()) { std::cout << "Error loading src1 \n"; return -1; }
+        if (src2.empty()) { std::cout << "Error loading src2 \n"; return -1; }
+        alpha_slider = 0;
+        cv::namedWindow("Linear Blend", cv::WINDOW_AUTOSIZE); // Create Window
+        char TrackbarName[50];
+        sprintf(TrackbarName, "Alpha x %d", alpha_slider_max);
+        cv::createTrackbar(TrackbarName, "Linear Blend", &alpha_slider, alpha_slider_max, on_trackbar);
+        on_trackbar(alpha_slider, 0);
+        cv::waitKey(0);
+      //  cv::Mat depth = cv::imread(name_depth, IMREAD_UNCHANGED);
+      //  auto depthImage = k4a::image::create_from_buffer(K4A_IMAGE_FORMAT_DEPTH16, 1024, 1024, 1024 * 2,depth.data, 1024 * 1024 * 2, NULL, NULL); age);
+
+       //Hello all.
+      //     This problem in OpenVINO 2020.2 release being considered as a bug.Problem is related to media files with audio streams and MSMF backend.
+      //      Meanwhile, you can use one of the following workarounds :
+      //   1. Install FFmpeg as VideoCapture backend(on Windows you need to download OpenCV community plugin.There's downloader script in the package: openvino\opencv\ffmpeg-download.ps1. Right click on it - Run with PowerShell).
+      //   2. Use hot fix available in upstream https ://github.com/opencv/opencv/pull/17406
+      //   3. Use media file without audio stream
         if (isVideo && !(FLAGS_i == "cam" ? cap.open(0) : cap.open(FLAGS_i))) {
             throw std::logic_error("Cannot open input file or camera: " + FLAGS_i);
         }
