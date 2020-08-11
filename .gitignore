@@ -1,1 +1,13 @@
 *.pyc
+*.vcproj
+*.tlog
+*.obj
+*.log
+*.recipe
+*.db
+*.json
+*.bin
+*.suo
+*.ipch
+*.sqlite
+* overview*
