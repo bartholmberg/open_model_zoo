@@ -9,5 +9,8 @@
 *.bin
 *.suo
 *.ipch
-*.sqlite
+*.sqlit
+*.xml
 * overview*
+models
+model
