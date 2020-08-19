@@ -283,9 +283,18 @@ struct PersonAttribsDetection : BaseDetection {
             freq[labels.at<int>(i)]++;
         }
 
-        auto freqArgmax = std::max_element(freq.begin(), freq.end()) - freq.begin();
+        auto freqArgmax = std::max_element(freq.begin(), freq.end()) -freq.begin();
 
-        return centers.at<cv::Vec3b>(freqArgmax);
+       // freqArgmax=freqArgmax-freq.begin();
+        //auto temp1 = centers.at<cv::Vec3b>(freqArgmax);
+        //auto temp2 = centers.at<cv::Vec3b>(2);
+       
+      //  return centers.at<cv::Vec3b>(1);
+        cv::Vec3b y = centers.data[freqArgmax];
+        cv::Mat z;
+       // auto temp = centers.begin(z);
+
+        return y;
     }
 
     AttributesAndColorPoints GetPersonAttributes() {
@@ -490,6 +499,7 @@ struct Load {
 
 
 int main(int argc, char *argv[]) {
+
     try {
         /** This demo covers 3 certain topologies and cannot be generalized **/
         std::cout << "InferenceEngine: " << GetInferenceEngineVersion() << std::endl;
@@ -803,6 +813,7 @@ int main(int argc, char *argv[]) {
                     break;
                 presenter.handleKey(key);
             }
+            
         } while (isVideo);
 
         auto total_t1 = std::chrono::high_resolution_clock::now();
