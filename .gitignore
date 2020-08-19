@@ -11,6 +11,5 @@
 *.ipch
 *.sqlit
 *.xml
-* overview*
-models
-model
+models/*
+model/*
