@@ -6,7 +6,14 @@ YOLO v3 is a real-time object detection model implemented with Keras\* from this
 
 ## Conversion
 
-1. Download or clone the official [repository](https://github.com/david8862/keras-YOLOv3-model-set) (tested on `ffede5` commit).
+
+
+1. git clone https://github.com/david8862/keras-YOLOv3-model-set
+(tested on `ffede5` commit)
+
+Note: keras-YOLOv3-model-set\tools\model_converter
+(has the tools dir, this is NOT the same as open_model_zoo tools)
+
 2. Use the folllowing commands to get original model (named `yolov3` in repository) and convert it to Keras\* format (see details in the [README.md](https://github.com/david8862/keras-YOLOv3-model-set/blob/ffede5d316568479610b75a3424e2a7b81f0209b/README.md)  file in the official repository):
 
    1. Download YOLO v3 weights:

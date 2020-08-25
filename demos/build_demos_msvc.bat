@@ -18,7 +18,7 @@
 setlocal EnableDelayedExpansion
 set "ROOT_DIR=%~dp0"
 
-set "SOLUTION_DIR64=C:\repo\omz_demo"
+set "SOLUTION_DIR64=C:\repo\omz_demog"
 
 set MSBUILD_BIN=
 set VS_PATH=
